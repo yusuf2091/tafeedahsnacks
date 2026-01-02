@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Snack Haven</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-2xl font-bold text-green-600">Tafeedah’s Snacks</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-green-600">Home</a>
+        <a href="shop.html" class="hover:text-green-600">Shop</a>
+        <a href="about.html" class="hover:text-green-600 font-semibold">About</a>
+        <a href="contact.html" class="hover:text-green-600">Contact</a>
+        <a href="cart.html" class="hover:text-green-600">Cart</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-white shadow-md">
+      <a href="index.html" class="block px-4 py-2 hover:bg-green-100">Home</a>
+      <a href="shop.html" class="block px-4 py-2 hover:bg-green-100">Shop</a>
+      <a href="about.html" class="block px-4 py-2 hover:bg-green-100">About</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-green-100">Contact</a>
+      <a href="cart.html" class="block px-4 py-2 hover:bg-green-100">Cart</a>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="pt-28 pb-6 text-center bg-green-100">
+    <h1 class="text-4xl font-bold text-green-800">About Us</h1>
+    <p class="text-gray-700 mt-2">Learn more about Snack Haven and our mission</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 md:px-0 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Image -->
+      <div>
+        <img src="https://i.pinimg.com/1200x/fd/bf/81/fdbf8110c920377950da99e1d1bd6f8e.jpg" alt="Snacks" class="w-full h-96 object-cover rounded-lg shadow-md">
+      </div>
+
+      <!-- Text -->
+      <div class="flex flex-col justify-center">
+        <h2 class="text-3xl font-bold text-green-800 mb-4">Our Story</h2>
+        <p class="text-gray-700 mb-4">
+          Snack Haven started with a simple mission: to bring delicious and affordable snacks to everyone. 
+          From freshly baked cookies and meat pies to fluffy doughnuts, we craft every snack with love and care.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Our team is passionate about quality and customer satisfaction. We source the best ingredients 
+          and focus on creating snacks that bring joy to every bite.
+        </p>
+        <p class="text-gray-700">
+          Whether you’re grabbing a quick treat or stocking up for a party, Snack Haven is your go-to place 
+          for delightful snacks. Join us on our journey to make every snack experience unforgettable!
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-12 bg-green-50">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-6">Our Mission</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        To provide high-quality, tasty snacks that bring happiness to our customers while maintaining 
+        sustainable practices and supporting our local community. Every snack is a moment of joy!
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8 mt-8 shadow-inner">
+    <div class="container mx-auto px-4 text-center">
+  
+      <p class="text-gray-700 mb-4">Follow us on social media</p>
+  
+      <div class="flex justify-center space-x-6 mb-4 text-2xl">
+        <a href="#" class="text-green-600 hover:text-green-800 transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+  
+        <a href="#" class="text-green-600 hover:text-green-800 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+  
+        <a href="#" class="text-green-600 hover:text-green-800 transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+  
+        <a href="#" class="text-green-600 hover:text-green-800 transition">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+  
+      <p class="text-gray-500">
+        &copy; 2025 Snack Haven. All rights reserved.
+      </p>
+  
+    </div>
+  </footer>
+  
+
+  <!-- JS -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    window.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>
